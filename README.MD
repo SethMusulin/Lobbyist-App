@@ -14,6 +14,13 @@ To get this application running locally, you should be able to simply clone this
      rake db:migrate
      rails s
 
+##Staging##
+
+http://shrouded-garden-8917.herokuapp.com/
+
+##Production##
+
+http://aqueous-dusk-5147.herokuapp.com/
 
 
 
