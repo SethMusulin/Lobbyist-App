@@ -1,11 +1,10 @@
-
-##Lobbyist-App##
+##Lobbyist-App
 
 Lobbyist App is intended to be a tool to assist lobbyists in their day-to-day activities at the capitol.  Initially, this app will
 be a simple CRUD application with many opportunities for helpful features in the near future.
 
 
-##Installation##
+##Installation
 
 To get this application running locally, you should be able to simply clone this repository and run the following:
 
@@ -14,11 +13,11 @@ To get this application running locally, you should be able to simply clone this
      rake db:migrate
      rails s
 
-##Staging##
+##Staging
 
 http://shrouded-garden-8917.herokuapp.com/
 
-##Production##
+##Production
 
 http://aqueous-dusk-5147.herokuapp.com/
 
