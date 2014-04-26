@@ -16,13 +16,14 @@
 
 
 body {
-    background: url("/assets/capitol_vd_bobash.jpg") no-repeat center center fixed;
+    background-image: url("/assets/capitol_vd_bobash.jpg");
     background-size: cover;
 }
 
 #header_container{
-    margin-left: 5em;
-    background: url("/assets/Lobb copy.png") no-repeat center center fixed;
+    margin-left: 6em;
+    background-image: url("/assets/Lobb copy.png");
+    background-repeat: no-repeat;
     height: 35em;
 
 }
