@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
-root "welcome#index"
+  root "welcome#index"
 
 
-get '/about', to: "welcome#about"
+  get '/about', to: "welcome#about"
+
+  resources :feature_requests
 
 end
