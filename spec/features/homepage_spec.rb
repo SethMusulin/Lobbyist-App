@@ -10,8 +10,5 @@ feature "Homepage" do
     click_link "Home"
     expect(page).to have_content "About"
 
-
-
-
   end
 end

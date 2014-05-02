@@ -28,6 +28,10 @@ body {
 
 #nav_container {
   margin-top: -76px;
+  background-color: lightgrey;
+  opacity: .9;
+  overflow: hidden;
+  clear: both
 
 }
 
@@ -63,4 +67,15 @@ body {
 }
 
 .features {
+}
+
+#note_container {
+  margin-top: 3em;
+  float: left;
+
+}
+
+#show_tag {
+  margin-top: 3em;
+  float: left;
 }

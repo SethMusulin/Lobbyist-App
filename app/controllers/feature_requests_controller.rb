@@ -14,3 +14,4 @@ class FeatureRequestsController < ApplicationController
     redirect_to '/feature_requests'
   end
 end
+

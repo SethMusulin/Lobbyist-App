@@ -1,0 +1,15 @@
+<div id="note_container">
+  <%= @note.created_at %>
+<%= @note.title %>
+<%= @note.tag %>
+<%= @note.note.html_safe%>
+</div>
+
+<div id="nav_container">
+
+  <ul id="menu">
+    <li><a href="/">Home</a></li>
+    <li><a href="/feature_requests">Feature Requests</a></li>
+    <li><a href="/notes">Note Pad</a></li>
+  </ul>
+</div>
