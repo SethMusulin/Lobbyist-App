@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'newrelic_rpm'
 gem 'tinymce-rails', '~> 4.0.19'
 gem 'rails_12factor', '~> 0.0.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
