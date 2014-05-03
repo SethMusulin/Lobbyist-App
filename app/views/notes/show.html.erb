@@ -4,7 +4,12 @@
 <%= @note.tag %>
 <%= @note.note.html_safe%>
 </div>
+<div>
 
+  <%=link_to "Delete Note", note_path(@note), method: :delete, id: "button", class: "delete", data: {confirm: "Are you sure?"}%>
+  <%=link_to "Edit Note", edit_note_path(@note), id: "button"%>
+
+</div>
 <div id="nav_container">
 
   <ul id="menu">

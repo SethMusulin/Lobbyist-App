@@ -63,10 +63,13 @@ body {
   opacity: .7;
   width: 20em;
   font-size: 120%;
+  float: left;
 
 }
 
-.features {
+#features {
+  margin-top: 3em;
+  float: left;
 }
 
 #note_container {
