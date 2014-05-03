@@ -9,6 +9,18 @@ feature "Homepage" do
     expect(page).to have_content "Welcome"
     click_link "Home"
     expect(page).to have_content "About"
+  end
 
+  scenario "User can register" do
+    visit '/'
+
+    click_link "Register"
+
+    fill_in "Email", with: "mike@example.com"
+    fill_in "Password", with: "123!@"
+    click_button "Create User"
+
+    expect(page).to have_content("Welcome, mike@example.com!")
   end
 end
+
