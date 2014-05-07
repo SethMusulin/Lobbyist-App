@@ -27,4 +27,7 @@ http://aqueous-dusk-5147.herokuapp.com/
 https://github.com/SethMusulin/Lobbyist-App
 
 
+{<img src="https://travis-ci.org/SethMusulin/Sparkling-Hill-Rails-Media-Manager.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/SethMusulin/Sparkling-Hill-Rails-Media-Manager]
+
+
 
