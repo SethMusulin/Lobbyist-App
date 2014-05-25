@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default from: "https://shrouded-garden-8917"
+  default from: "notifications@g2-social-network.com"
 
   def welcome_email(user)
     @user = user
