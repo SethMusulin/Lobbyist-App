@@ -8,11 +8,11 @@ describe UserMailer do
     let(:welcome_message) { UserMailer.welcome_email(user) }
 
     it 'comes from the proper user' do
-      expect(welcome_message.from).to eq 'localhost:3000'
+      expect(welcome_message.from).to eq ["notifications@g2-social-network.com"]
     end
 
     it 'goes to the proper user' do
-      expect(welcome_message.to).to eq ['new-user@example.com']
+      expect(welcome_message.to).to eq ["new-user@example.com"]
     end
 
     it 'has the proper subject' do

@@ -1,6 +1,6 @@
-require 'bcrypt'
 
 class User < ActiveRecord::Base
+  has_many :notes
 
   validates :email, :presence => true,
              :length => {:maximum => 55}

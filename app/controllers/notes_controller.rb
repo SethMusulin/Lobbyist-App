@@ -1,7 +1,8 @@
 class NotesController < SignedinController
 
   def index
-    @notes = Note.order(:created_at)
+    @user = User.find(session[:user_id])
+    #@notes = Note.order(:created_at)
   end
 
   def new
@@ -13,6 +14,7 @@ class NotesController < SignedinController
     @note.title = params[:note][:title]
     @note.tag = params[:note][:tag]
     @note.note = params[:note][:note]
+    @note.user_id = session[:user_id]
     if @note.save
       redirect_to "/notes/#{@note.id}"
     else

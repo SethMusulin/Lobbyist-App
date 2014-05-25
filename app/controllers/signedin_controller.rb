@@ -9,7 +9,7 @@ class SignedinController < ApplicationController
 
   def require_authentication
     unless current_user
-      redirect_to '/dashboard', notice: "You must be signed in to access this page"
+      redirect_to '/users', notice: "You must be signed in to access this page"
     end
 
 
