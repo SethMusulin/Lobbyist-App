@@ -1,22 +1,15 @@
-Notes
 
+<div class="note-container">
 <div class="actions">
+  <p>  Notes </p>
   <%= link_to "Add New Note", new_note_path %>
 </div>
 
 <div id="show_tag">
 <% @notes.each do |note| %>
 
-    <p> <%= link_to note.title, note %> </p>
+    <p> <%= link_to note.title, note %> <%= note.created_at.strftime("%B %d, %Y") %> </p>
 
 <% end %>
 </div>
-
-<div id="nav_container">
-
-  <ul id="menu">
-    <li><a href="/">Home</a></li>
-    <li><a href="/feature_requests">Feature Requests</a></li>
-    <li><a href="/notes">Note Pad</a></li>
-  </ul>
 </div>

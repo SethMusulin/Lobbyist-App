@@ -1,5 +1,16 @@
 <h1>Add Note</h1>
 
+<% if @note.errors.present? %>
+
+    <div class="errors">
+      <ul>
+        <% @note.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+        <% end %>
+<% end %>
+</ul>
+</div>
+
 <%= form_for @note do |f| %>
 
     <p>

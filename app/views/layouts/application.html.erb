@@ -4,10 +4,49 @@
   <title>LobbyistApp</title>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
   <%= favicon_link_tag 'Lobb_copy.png' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+  <div class="container navbar-inner">
+    <a href="/" class="navbar-brand">L  O  B  B </a>
+
+    <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <div class="collapse navbar-collapse navHeaderCollapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/dashboard">H o m e </a></li>
+        <li><a href="/notes">N o t e s </a></li>
+        <li><a href="/feature_requests">Feature Requests</a></li>
+
+        <!--<li class="dropdown" role="menu">-->
+          <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Bill Tracker </a>-->
+        <li><a href="#" data-toggle="modal">Contacts</a></li>
+      </ul>
+    </div>
+
+  </div>
+  <% if session[:user_id]%>
+      <%= link_to "Log out", log_out_path %>
+      <% else %>
+      <div>
+      </li> <a href="/users">Register</a></li>
+      &nbsp
+      </li><%= link_to "Log in", log_in_path %></li>
+      </div>
+      <% end %>
+</nav>
+
+<% flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, class: name %>
+<% end -%>
 
 <%= yield %>
 

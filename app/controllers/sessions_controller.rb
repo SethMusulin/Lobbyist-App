@@ -1,23 +1,24 @@
 class SessionsController < ApplicationController
-
   def new
   end
 
   def create
-    user = User.find_by(email: params[:session][:email].downcase)
-    if user && user.authenticate(params[:session][:password])
+    user = User.find_by(email: params[:email]).try(:authenticate, params[:password])
+    #user = User.find_by(email: params[:session][:email].downcase)
+    if user
       session[:user_id] = user.id
-      redirect_to '/'
+      flash[:success] = "Login Successful, Welcome #{user.email}"
+      redirect_to '/dashboard'
     else
-      render '/log_in'
+      flash.now[:error] = "Invalid Email and Password Combination"
+      render "new"
     end
   end
 
   def destroy
-    session.clear
-    redirect_to '/'
+    session[:user_id] = nil
+    redirect_to '/dashboard'
   end
-
 end
 
 

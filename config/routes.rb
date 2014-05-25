@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   root "welcome#index"
 
+  get '/dashboard' => "dashboard#index"
 
   get '/about', to: 'welcome#about'
 

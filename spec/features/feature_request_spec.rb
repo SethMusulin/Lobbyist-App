@@ -2,7 +2,7 @@ require 'spec_helper'
 
 feature "Feature Request" do
   scenario "user can add feature request" do
-    visit '/'
+    visit '/dashboard'
 
     click_link "Feature Requests"
     fill_in "feature", with: "Allows user to keep notes inside the app"
