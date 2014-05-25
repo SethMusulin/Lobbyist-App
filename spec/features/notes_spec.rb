@@ -2,7 +2,10 @@ require 'spec_helper'
 
 feature "Note Pad" do
   scenario "allows user to input a note and submit" do
-    visit '/'
+    visit '/dashboard'
+
+    click_link "N o t e s"
+    expect(page).to have_content"You must be signed in to access this page"
 
     first(:link, "Register").click
     fill_in "Email", with: "seth@example.com"
