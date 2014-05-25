@@ -1,4 +1,4 @@
-class NotesController < ApplicationController
+class NotesController < SignedinController
 
   def index
     @notes = Note.order(:created_at)
