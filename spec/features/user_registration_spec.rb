@@ -13,7 +13,7 @@ feature "Homepage" do
 
     click_link "Log out"
 
-    click_link "Log in"
+    first(:link, "Login").click
     fill_in "Email", with: "seth@example.com"
     fill_in "Password", with: "123456"
     click_button "Login"
