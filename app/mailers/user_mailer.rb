@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default from: "localhost:3000"
+  default from: "https://shrouded-garden-8917"
 
   def welcome_email(user)
     @user = user
