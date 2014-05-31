@@ -28,12 +28,14 @@
 
         <!--<li class="dropdown" role="menu">-->
           <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Bill Tracker </a>-->
-        <li><a href="#" data-toggle="modal">Contacts</a></li>
+        <li><a href="/bill_tracker" data-toggle="modal">Bill Tracker</a></li>
       </ul>
     </div>
 
   </div>
-  <% if session[:user_id]%>
+  <% if current_user%>
+      <%= link_to current_user.email, "/users/#{current_user.id}" %>
+      &nbsp
       <%= link_to "Log out", log_out_path %>
       <% else %>
       <div>

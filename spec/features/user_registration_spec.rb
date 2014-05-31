@@ -2,7 +2,7 @@ require 'spec_helper'
 
 feature "Homepage" do
 
-  scenario "User can register and log in " do
+  scenario "User can manage account" do
     visit '/'
 
     first(:link, "Register").click
@@ -20,7 +20,11 @@ feature "Homepage" do
 
     expect(page).to have_content("Log out")
 
-  end
+    click_link "seth@example.com"
+    expect(page).to have_content("Profile")
+
 
 end
+end
+
 

@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'newrelic_rpm'
 gem 'tinymce-rails', '~> 4.0.19'
 gem 'rails_12factor', '~> 0.0.2'
+gem 'faraday', '~> 0.9.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
 # Use postgresql as the database for Active Record
@@ -30,8 +31,13 @@ group :test, :development do
   gem 'rspec-rails', '~> 2.14.2'
   gem 'capybara', '~> 2.2.1'
   gem 'launchy', '~> 2.4.2'
+  gem 'vcr', '~> 2.9.2'
+
 end
 
+group :test do
+  gem 'webmock', '~> 1.18.0'
+end
 
 
 # Use ActiveModel has_secure_password

@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.legiscan.com/?bill=HB1030&key=2577f3697e3597ca2363909f55f143c8&op=getBill&state=CO
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 30 May 2014 19:52:24 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '1576'
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"status":"OK","bill":{"bill_id":579978,"change_hash":"f783d121f810bcc576ba2372b6eaf1f4","session":{"session_id":1077,"session_name":"2014
+        Regular Session"},"url":"http:\/\/legiscan.com\/CO\/bill\/HB1030\/2014","state_link":"http:\/\/www.leg.state.co.us\/clics\/clics2014a\/csl.nsf\/fsbillcont2\/6463D7584236949F87257C3000062211?Open","completed":0,"status":3,"status_date":"2014-04-30","progress":[{"date":"2014-01-08","event":1},{"date":"2014-01-08","event":9},{"date":"2014-02-05","event":10},{"date":"2014-02-05","event":9},{"date":"2014-02-17","event":2},{"date":"2014-02-17","event":9},{"date":"2014-03-13","event":10},{"date":"2014-03-13","event":9},{"date":"2014-04-30","event":3}],"state":"CO","state_id":6,"bill_number":"HB1030","bill_type":"B","body":"H","body_id":21,"current_body":"H","current_body_id":21,"title":"Hydroelectric
+        Generation Incentive","description":"Hydroelectric Generation Incentive","committee":[],"history":[{"date":"2014-01-08","action":"Introduced
+        In House - Assigned to Transportation & Energy","chamber":"H","chamber_id":21,"importance":1},{"date":"2014-02-05","action":"House
+        Committee on Transportation & Energy Refer Amended to House Committee of the
+        Whole","chamber":"H","chamber_id":21,"importance":1},{"date":"2014-02-10","action":"House
+        Second Reading Laid Over Daily - No Amendments","chamber":"H","chamber_id":21,"importance":0},{"date":"2014-02-12","action":"House
+        Second Reading Passed with Amendments - Committee, Floor","chamber":"H","chamber_id":21,"importance":0},{"date":"2014-02-13","action":"House
+        Third Reading Passed - No Amendments","chamber":"H","chamber_id":21,"importance":0},{"date":"2014-02-17","action":"Introduced
+        In Senate - Assigned to Agriculture, Natural Resources, & Energy","chamber":"S","chamber_id":22,"importance":1},{"date":"2014-03-13","action":"Senate
+        Committee on Agriculture, Natural Resources, & Energy Refer Unamended to Senate
+        Committee of the Whole","chamber":"S","chamber_id":22,"importance":1},{"date":"2014-03-18","action":"Senate
+        Second Reading Passed - No Amendments","chamber":"S","chamber_id":22,"importance":0},{"date":"2014-03-19","action":"Senate
+        Third Reading Passed - No Amendments","chamber":"S","chamber_id":22,"importance":0},{"date":"2014-04-29","action":"Signed
+        by the Speaker of the House","chamber":"H","chamber_id":21,"importance":0},{"date":"2014-04-29","action":"Signed
+        by the President of the Senate","chamber":"H","chamber_id":21,"importance":0},{"date":"2014-04-30","action":"Sent
+        to the Governor","chamber":"H","chamber_id":21,"importance":1}],"sponsors":[{"people_id":10773,"name":"Don
+        Coram","role_id":1,"ftm_id":139749,"sponsor_type_id":1,"sponsor_order":1},{"people_id":14276,"name":"Mitsch
+        Bush","role_id":1,"ftm_id":0,"sponsor_type_id":1,"sponsor_order":2},{"people_id":3250,"name":"Gail
+        Schwartz","role_id":2,"ftm_id":8416,"sponsor_type_id":1,"sponsor_order":3},{"people_id":10775,"name":"Roberts","role_id":2,"ftm_id":0,"sponsor_type_id":1,"sponsor_order":4}],"texts":[{"doc_id":908312,"date":"2014-01-08","type":"Introduced","mime":"application\/pdf","url":"http:\/\/legiscan.com\/CO\/text\/HB1030\/id\/908312","state_link":"http:\/\/www.leg.state.co.us\/clics\/clics2014a\/csl.nsf\/fsbillcont2\/6463D7584236949F87257C3000062211\/$FILE\/1030_01.pdf"},{"doc_id":952415,"date":"2014-02-07","type":"Comm
+        Sub","mime":"application\/pdf","url":"http:\/\/legiscan.com\/CO\/text\/HB1030\/id\/952415","state_link":"http:\/\/www.leg.state.co.us\/clics\/clics2014a\/csl.nsf\/fsbillcont2\/6463D7584236949F87257C3000062211\/$FILE\/1030te_01.pdf"},{"doc_id":957057,"date":"2014-02-12","type":"Engrossed","mime":"application\/pdf","url":"http:\/\/legiscan.com\/CO\/text\/HB1030\/id\/957057","state_link":"http:\/\/www.leg.state.co.us\/clics\/clics2014a\/csl.nsf\/fsbillcont2\/6463D7584236949F87257C3000062211\/$FILE\/1030_eng.pdf"},{"doc_id":957844,"date":"2014-02-13","type":"Engrossed","mime":"application\/pdf","url":"http:\/\/legiscan.com\/CO\/text\/HB1030\/id\/957844","state_link":"http:\/\/www.leg.state.co.us\/clics\/clics2014a\/csl.nsf\/fsbillcont2\/6463D7584236949F87257C3000062211\/$FILE\/1030_ren.pdf"},{"doc_id":991045,"date":"2014-03-18","type":"Amended","mime":"application\/pdf","url":"http:\/\/legiscan.com\/CO\/text\/HB1030\/id\/991045","state_link":"http:\/\/www.leg.state.co.us\/clics\/clics2014a\/csl.nsf\/fsbillcont2\/6463D7584236949F87257C3000062211\/$FILE\/1030_rev.pdf"},{"doc_id":992063,"date":"2014-03-19","type":"Amended","mime":"application\/pdf","url":"http:\/\/legiscan.com\/CO\/text\/HB1030\/id\/992063","state_link":"http:\/\/www.leg.state.co.us\/clics\/clics2014a\/csl.nsf\/fsbillcont2\/6463D7584236949F87257C3000062211\/$FILE\/1030_rer.pdf"},{"doc_id":996689,"date":"2014-03-25","type":"Enrolled","mime":"application\/pdf","url":"http:\/\/legiscan.com\/CO\/text\/HB1030\/id\/996689","state_link":"http:\/\/www.leg.state.co.us\/clics\/clics2014a\/csl.nsf\/fsbillcont2\/6463D7584236949F87257C3000062211\/$FILE\/1030_enr.pdf"}],"votes":[{"roll_call_id":315753,"date":"2014-02-05","passed":1,"desc":"FINAL
+        VOTE - Refer House Bill 14-1030, as amended, to the Committee of the Whole","url":"http:\/\/legiscan.com\/CO\/rollcall\/HB1030\/id\/315753","state_link":"http:\/\/www.leg.state.co.us\/clics\/clics2014a\/commsumm.nsf\/IndSumm\/E7ABE200535F821987257C760083934D"},{"roll_call_id":320092,"date":"2014-02-05","passed":1,"desc":"FINAL
+        VOTE - Adopt amendment L.001 (Attachment N)","url":"http:\/\/legiscan.com\/CO\/rollcall\/HB1030\/id\/320092","state_link":"http:\/\/www.leg.state.co.us\/clics\/clics2014a\/commsumm.nsf\/IndSumm\/B112AB354F8149FA87257C7600823C75"},{"roll_call_id":320093,"date":"2014-02-05","passed":0,"desc":"FINAL
+        VOTE - Adopt amendment L.005 (Attachment Q)","url":"http:\/\/legiscan.com\/CO\/rollcall\/HB1030\/id\/320093","state_link":"http:\/\/www.leg.state.co.us\/clics\/clics2014a\/commsumm.nsf\/IndSumm\/9D1682EB169F772487257C760082D259"},{"roll_call_id":320094,"date":"2014-02-05","passed":0,"desc":"FINAL
+        VOTE - Move amendment L.002 (Attachment O)","url":"http:\/\/legiscan.com\/CO\/rollcall\/HB1030\/id\/320094","state_link":"http:\/\/www.leg.state.co.us\/clics\/clics2014a\/commsumm.nsf\/IndSumm\/6BDCB0F446D83B4387257C76008291BB"},{"roll_call_id":320095,"date":"2014-02-05","passed":0,"desc":"FINAL
+        VOTE - Adopt amendment L.004 (Attachment P)","url":"http:\/\/legiscan.com\/CO\/rollcall\/HB1030\/id\/320095","state_link":"http:\/\/www.leg.state.co.us\/clics\/clics2014a\/commsumm.nsf\/IndSumm\/373DF03447CC7BB687257C760082BB5B"},{"roll_call_id":341224,"date":"2014-03-13","passed":1,"desc":"FINAL
+        VOTE - Refer House Bill 14-1030 to the Committee of the Whole","url":"http:\/\/legiscan.com\/CO\/rollcall\/HB1030\/id\/341224","state_link":"http:\/\/www.leg.state.co.us\/clics\/clics2014a\/commsumm.nsf\/IndSumm\/99CD51D21AA14BD887257C9A007563EE"},{"roll_call_id":342519,"date":"2014-02-05","passed":1,"desc":"FINAL
+        VOTE - Refer House Bill 14-1030, as amended, to the Committee of the Whole","url":"http:\/\/legiscan.com\/CO\/rollcall\/HB1030\/id\/342519","state_link":"http:\/\/www.leg.state.co.us\/CLICS\/CLICS2014A\/commsumm.nsf\/IndSumm\/E7ABE200535F821987257C760083934D"},{"roll_call_id":342520,"date":"2014-02-05","passed":1,"desc":"FINAL
+        VOTE - Adopt amendment L.001 (Attachment N)","url":"http:\/\/legiscan.com\/CO\/rollcall\/HB1030\/id\/342520","state_link":"http:\/\/www.leg.state.co.us\/CLICS\/CLICS2014A\/commsumm.nsf\/IndSumm\/B112AB354F8149FA87257C7600823C75"},{"roll_call_id":342521,"date":"2014-02-05","passed":0,"desc":"FINAL
+        VOTE - Adopt amendment L.005 (Attachment Q)","url":"http:\/\/legiscan.com\/CO\/rollcall\/HB1030\/id\/342521","state_link":"http:\/\/www.leg.state.co.us\/CLICS\/CLICS2014A\/commsumm.nsf\/IndSumm\/9D1682EB169F772487257C760082D259"},{"roll_call_id":342522,"date":"2014-02-05","passed":0,"desc":"FINAL
+        VOTE - Move amendment L.002 (Attachment O)","url":"http:\/\/legiscan.com\/CO\/rollcall\/HB1030\/id\/342522","state_link":"http:\/\/www.leg.state.co.us\/CLICS\/CLICS2014A\/commsumm.nsf\/IndSumm\/6BDCB0F446D83B4387257C76008291BB"},{"roll_call_id":342523,"date":"2014-02-05","passed":0,"desc":"FINAL
+        VOTE - Adopt amendment L.004 (Attachment P)","url":"http:\/\/legiscan.com\/CO\/rollcall\/HB1030\/id\/342523","state_link":"http:\/\/www.leg.state.co.us\/CLICS\/CLICS2014A\/commsumm.nsf\/IndSumm\/373DF03447CC7BB687257C760082BB5B"},{"roll_call_id":342524,"date":"2014-03-13","passed":1,"desc":"FINAL
+        VOTE - Refer House Bill 14-1030 to the Committee of the Whole","url":"http:\/\/legiscan.com\/CO\/rollcall\/HB1030\/id\/342524","state_link":"http:\/\/www.leg.state.co.us\/CLICS\/CLICS2014A\/commsumm.nsf\/IndSumm\/99CD51D21AA14BD887257C9A007563EE"}]}}'
+    http_version: 
+  recorded_at: Fri, 30 May 2014 19:52:24 GMT
+recorded_with: VCR 2.9.2

@@ -1,0 +1,18 @@
+
+<div class="bill_container">
+  <div class="bill_search">
+    <%= form_tag("/bill_tracker", method: "get") do %>
+        <%= label_tag(:state, "State Abbreviation") %>
+        <%= text_field_tag(:state, nil, placeholder: "CO") %>
+        <%= label_tag(:bill, "Bill Number") %>
+        <%= text_field_tag(:bill, nil, placeholder: "HB1030") %>
+        <%= submit_tag("Search") %>
+    <p>Note: When searching for legislation, please remove any year indicator from the bill number.  For example, "HB13-1030" should be entered "HB1030"</p>
+        <hr>
+    <% end %>
+  </div>
+  <% if @bill_results %>
+      <%= render "results" %>
+  <% end %>
+</div>
+

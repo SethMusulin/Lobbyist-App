@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/about', to: 'welcome#about'
 
   get '/users', to: 'users#new'
+  get '/users/:id', to: 'users#show'
 
   post '/users', to: 'users#create'
 
@@ -18,6 +19,9 @@ Rails.application.routes.draw do
   resources :feature_requests
 
   resources :notes
+  resources :contacts
+
+  get '/bill_tracker', to: "bill_trackers#show"
 
 
 end
