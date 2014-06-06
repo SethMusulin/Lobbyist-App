@@ -23,8 +23,47 @@ feature "Homepage" do
     click_link "seth@example.com"
     expect(page).to have_content("Profile")
 
+  end
+  scenario "user can reset their password" do
+    user = User.create!(email: 'user@example.com', password: 'Password1')
+    mail_sent = ActionMailer::Base.deliveries.length
+    visit '/'
 
-end
+    first(:link, "Login").click
+    click_link 'Forgot password?'
+
+    fill_in 'Email', with: user.email
+    click_button 'Reset Password'
+
+    expect(ActionMailer::Base.deliveries.length).to eq (mail_sent + 1)
+    expect(page).to have_content 'An email has been sent with instructions on how to reset your password'
+
+
+
+    email_body = ActionMailer::Base.deliveries.last.body.raw_source
+    @document = Nokogiri::HTML(email_body)
+    result = @document.xpath("//html//body//a//@href")[0].value
+
+    visit result
+
+    fill_in 'Password', with: 'Password2'
+    fill_in 'Password confirmation', with: 'Password2'
+    click_on 'Update Password'
+
+    expect(page).to have_content "Password Updated"
+
+    visit '/'
+
+    first(:link, "Login").click
+
+
+    fill_in 'Email', with: user.email
+    fill_in 'Password', with: 'Password2'
+    click_button 'Login'
+
+    expect(page).to have_content user.email
+    expect(page).to have_link 'Log out'
+  end
 end
 
 

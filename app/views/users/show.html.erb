@@ -8,8 +8,10 @@
            Email:
          </td>
          <td>
+           <% if current_user %>
            <%= current_user.email %>
-         </td>
+         <%end  %>
+               </td>
        </tr>
        <tr>
          <td>

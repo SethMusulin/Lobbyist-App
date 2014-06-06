@@ -32,6 +32,7 @@ group :test, :development do
   gem 'capybara', '~> 2.2.1'
   gem 'launchy', '~> 2.4.2'
   gem 'vcr', '~> 2.9.2'
+  gem 'dotenv-rails'
 
 end
 

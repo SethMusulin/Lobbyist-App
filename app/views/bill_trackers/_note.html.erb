@@ -1,0 +1,40 @@
+<div class="bill_note_container">
+
+You can create Notes in this editor and they will be available later through the Dashboard and Notes.
+
+<% if @note.errors.present? %>
+
+    <div class="errors">
+      <ul>
+        <% @note.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+        <% end %>
+<% end %>
+</ul>
+</div>
+
+<%= form_for @note do |f| %>
+
+    <p>
+      <%= f.label :title, class: "form-label" %>
+      <%= f.text_field :title %>
+    </p>
+
+    <p>
+      <%= f.label :tag, class: "form-label" %>
+      <%= f.text_field :tag %>
+    </p>
+
+    <p>
+      <%= f.label :note, class: "form-label" %>
+      <%= f.text_area :note, :class => "tinymce", :rows => 20, :cols => 100 %>
+    </p>
+    <p>
+      <%= f.submit class: "form-button", class: "btn btn-small btn-primary"  %>
+    </p>
+
+<% end %>
+
+</div>
+
+<%= tinymce %>

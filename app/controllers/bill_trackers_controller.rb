@@ -1,9 +1,10 @@
 require 'legiscan_api'
 
-class BillTrackersController < SignedinController
+class BillTrackersController < ApplicationController
 
 
   def show
+    @note = Note.new
     if params[:state] && params[:bill]
       @state = params[:state]
       @bill = params[:bill].gsub(/\d\d-/i, "")

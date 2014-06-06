@@ -6,4 +6,10 @@ class UserMailer < ActionMailer::Base
     @url  = '/login'
     mail(to: @user.email, subject: 'Welcome to Lobb')
   end
+
+  def forgot_password(user)
+    @user = user
+    @link = "/reset-passwords/edit/#{@user.id}"
+    mail(to: @user.email, subject: 'Password reset')
+  end
 end

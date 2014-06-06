@@ -3,9 +3,14 @@ ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
+
+
 VCR.configure do |c|
+  c.allow_http_connections_when_no_cassette = true
   c.cassette_library_dir = 'fixtures/vcr_cassettes'
   c.hook_into :webmock
+
+  c.filter_sensitive_data('<LEGISCAN>') {ENV['LEGISCAN']}
 end
 
 # Requires supporting ruby files with custom matchers and macros, etc,

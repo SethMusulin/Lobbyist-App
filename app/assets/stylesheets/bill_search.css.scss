@@ -6,7 +6,8 @@
   padding-top: 1em;
 }
 .results_container{
-  width: 50%;
+  width: 45%;
+  float: left;
 }
 .clickable
 {
@@ -28,3 +29,11 @@
 }
 a.clickable { color: inherit; }
 a.clickable:hover { text-decoration:none; }
+
+.bill_note_container{
+  width: 50%;
+  float: right;
+  border: 1px solid black;
+  margin-right: 2em;
+
+}

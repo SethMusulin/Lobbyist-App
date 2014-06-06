@@ -6,7 +6,7 @@
 </div>
 
 <div id="show_tag">
-<% @user.notes.each do |note| %>
+<%@notes.each do |note| %>
 
     <p> <%= link_to note.title, note %> <%= note.created_at.strftime("%B %d, %Y") %> </p>
 

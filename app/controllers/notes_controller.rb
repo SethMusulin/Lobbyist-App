@@ -1,7 +1,8 @@
 class NotesController < SignedinController
 
   def index
-    @user = User.find(session[:user_id])
+    @notes=current_user.notes
+    #@user = User.find(session[:user_id])
     #@notes = Note.order(:created_at)
   end
 
