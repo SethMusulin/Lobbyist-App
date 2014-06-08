@@ -1,27 +1,66 @@
-<div id="welcome-page-container">
-  <div class="page-header">
-    <h1 style="margin-top: 1px;"> Welcome to Lobb
-      <small>The web application for Lobbyists</small>
+<div class="container-full">
 
-      <a href='/log_in' class="btn btn-primary btn-lg" role="button" style="float:right; display: inline-block">Login</a>
-      <a href='/users' class="btn btn-primary btn-lg" role="button" style="float:right; display: inline-block">Register</a>
-    </h1>
+  <div class="logo_container">
+    <div class="logo">
+    <img src="assets/Lobb.png" width="300"  height="100" margin-left="300" alt="Logo" />
+</div>
+</div>
+<div class="row">
+
+  <div class="col-lg-12 text-center v-center">
+
+    <p class="logo_lead"> L O B B </p>
+    <p class="lead">Sign in below or scroll down for more information</p>
+    <br>
+
+      <%= form_tag :controller => :sessions, :action => :create, class: "input-group input-group-lg col-sm-offset-4 col-sm-4" do %>
+      <%= label_tag :email%>  <%= text_field_tag :email%>
+      <%= label_tag :password %>  <%= password_field_tag :password %>
+      <%= submit_tag 'Login', :id => 'login_submit', class: "btn btn-large btn-primary" %>
+      <% end %>
+      <p> <%= link_to 'Forgot password?', '/reset_passwords/new' %></p>
+      <a href="/users">Register</a>
+
   </div>
 
-  <div id="logo_container">
-    <div id="header_logo">
+</div> <!-- /row -->
 
+
+<br><br><br><br><br>
+
+</div> <!-- /container full -->
+
+<div class="container">
+
+  <hr>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading"><h3><a href="/dashboard">Welcome to Lobb</a></h3></div>
+        <div class="panel-body">Lobb is a simple web application for lobbyists that allows them to check the status of legislation and take notes on the fly.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading"><h3><a href="/bill_tracker" data-toggle="modal">Bill Tracker</a></h3></div>
+        <div class="panel-body">Bill tracker utilizes the Legiscan API to bring you up-to-date information on the legislation that is important to you.
+          Sign up to day to give it a try.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading"><h3><a href="/notes">Notes </a></h3></div>
+        <div class="panel-body">Lobb also let's you track important notes and comments about your searches.
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="jumbotron">
-    <h2>A Feature-Rich Organizational Application to Make Your Life Easier.</h2>
-
-    <p>Lobb allows you to organize your notes and contacts, follow important legislation and set calendar appointments
-      directly from the application.</p>
-
-    <p><a href='/users' class="btn btn-primary btn-lg" role="button">Register</a></p>
-
-    <p><a href='/log_in' class="btn btn-primary btn-lg" role="button">Login</a></p>
+  <div class="row">
+    <div class="col-lg-12">
+    </div>
   </div>
 </div>

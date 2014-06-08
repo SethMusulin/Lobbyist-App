@@ -1,33 +1,49 @@
 
-// welcome page contents //
 
 #welcome-page-container{
   background: image-url("capitol_vd_bobash.jpg") no-repeat center center fixed;
   background-size: cover;
   height: 100%;
 }
-h1 {
-  margin-top: 0;
+/* CSS used here will be applied after bootstrap.css */
+
+@import url(http://fonts.googleapis.com/css?family=Antic+Slab);
+
+html,body {
+  height:100%;
 }
 
-.page-header{
-  background: #eee;
-  margin-top: 0;
-  padding-right: 1.5em;
+.logo_lead {
+  font-family: 'Antic Slab', serif;
+  font-size:100px;
+  color:#3D66B8;
 }
 
-#header_logo {
-  background: image-url("Lobb.png") no-repeat center center fixed;
-  height: 47em;
+.lead {
+  color:#DDCCEE;
 }
 
-#logo_container{
-  height: 28.2em;
-   margin-top: 0;
+
+/* Custom container */
+.container-full {
+  margin: 0 auto;
+  width: 100%;
+  min-height:100%;
+  color:#eee;
+  background: image-url("capitol_vd_bobash.jpg") no-repeat center center fixed;
+  background-size: cover;
+
+  overflow:hidden;
 }
-.jumbotron{
-  bottom: 0;
-  padding: 1em 1em 1em 1em;
-  margin-top: 4em;
+.logo_container{
+  height: 5em;
 }
-// end welcome page contents //
+
+.container-full a {
+  color:#efefef;
+  text-decoration:none;
+}
+
+.v-center {
+  margin-top:20%;
+}
