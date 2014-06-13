@@ -1,11 +1,10 @@
 class LegiScanApi
-  def initialize (state, bill)
-    @state = state
-    @bill = bill
+  def initialize (token)
+    @token = token
   end
 
-  def call
-    response = Faraday.get("http://api.legiscan.com/?key=#{ENV['LEGISCAN']}&op=getBill&state=#{@state}&bill=#{@bill}")
+  def call (state, bill)
+    response = Faraday.get("http://api.legiscan.com/?key=#{@token}&op=getBill&state=#{state}&bill=#{bill}")
     JSON.parse(response.body)
   end
 end

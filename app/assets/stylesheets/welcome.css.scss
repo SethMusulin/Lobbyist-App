@@ -15,12 +15,14 @@ html,body {
 
 .logo_lead {
   font-family: 'Antic Slab', serif;
-  font-size:100px;
+  font-size:150px;
   color:#3D66B8;
 }
 
 .lead {
-  color:#DDCCEE;
+  color:#999;
+  background-image: linear-gradient(to bottom,#3c3c3c 0,#222 100%);
+  background-repeat: repeat-x;
 }
 
 
@@ -37,6 +39,8 @@ html,body {
 }
 .logo_container{
   height: 5em;
+  position: fixed;
+
 }
 
 .container-full a {

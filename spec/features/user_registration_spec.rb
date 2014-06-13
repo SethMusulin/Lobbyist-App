@@ -13,7 +13,6 @@ feature "Homepage" do
 
     click_link "Log out"
 
-    first(:link, "Login").click
     fill_in "Email", with: "seth@example.com"
     fill_in "Password", with: "123456"
     click_button "Login"
@@ -29,7 +28,6 @@ feature "Homepage" do
     mail_sent = ActionMailer::Base.deliveries.length
     visit '/'
 
-    first(:link, "Login").click
     click_link 'Forgot password?'
 
     fill_in 'Email', with: user.email
@@ -53,9 +51,6 @@ feature "Homepage" do
     expect(page).to have_content "Password Updated"
 
     visit '/'
-
-    first(:link, "Login").click
-
 
     fill_in 'Email', with: user.email
     fill_in 'Password', with: 'Password2'
