@@ -17,6 +17,7 @@ html,body {
   font-family: 'Antic Slab', serif;
   font-size:150px;
   color:#3D66B8;
+  opacity: .9;
 }
 
 .lead {
@@ -38,8 +39,11 @@ html,body {
   overflow:hidden;
 }
 .logo_container{
-  height: 5em;
+//  height: 5em;
   position: fixed;
+   width:300;
+  height:100;
+  margin-left:300;
 
 }
 
