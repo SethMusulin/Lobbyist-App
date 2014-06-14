@@ -10,7 +10,6 @@ class BillTrackersController < SignedinController
       @bill = params[:bill].gsub(/\d\d-/i, "").delete(' ').delete('-')
       @search = LegiScanApi.new(ENV['LEGISCAN'])
       @bill_results = @search.call(@state, @bill)
-
     end
   end
 end
