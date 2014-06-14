@@ -1,15 +1,25 @@
-
-<div class="note-container">
-<div class="actions">
-  <p>  Notes </p>
-  <%= link_to "Add New Note", new_note_path %>
+<div class="jumbotron">
+  <div class="intro_text">
+    <p> N O T E S</p>
+  </div>
+</div>
+<%= link_to "Add New Note", new_note_path %>
+</div>
 </div>
 
-<div id="show_tag">
-<%@notes.each do |note| %>
 
-    <p> <%= link_to note.title, note %> <%= note.created_at.strftime("%B %d, %Y") %> </p>
 
+<% @notes.each do |note| %>
+    <div class="col-md-8 note">
+      <div class="well">
+
+        <p> <%= link_to note.title, note %> <%= note.created_at.strftime("%B %d, %Y") %> </p>
+
+        <p> <%= note.tag %> </p>
+        <%= note.title %>
+        <%= note.tag %>
+        <%= note.note.html_safe %>
+      </div>
+
+    </div>
 <% end %>
-</div>
-</div>

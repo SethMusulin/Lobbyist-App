@@ -3,7 +3,6 @@
   margin-left: 29px;
 }
 
-
 #show_tag {
   border: 1px solid black;
   min-height: 25em;
@@ -12,9 +11,31 @@
   opacity: .9;
 }
 
-.errors{
+.errors {
   background-color: mintcream;
 }
-#user{
+
+#user {
   color: black;
+}
+
+.intro_text {
+  font-family: 'Cinzel', serif;
+  color: inherit;
+
+}
+.jumbotron{
+  background: image-url("capitol_vd_bobash.jpg") no-repeat center center fixed;
+
+}
+
+.col-md-4 .dashboard {
+  font-family: 'Cinzel', serif;
+  min-height: 50em;
+  display: inline_block;
+  margin: 2em;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+
 }

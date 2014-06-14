@@ -1,0 +1,35 @@
+<div class="jumbotron">
+        <div class="intro_text">
+            <p> D a s h b o a r d</p>
+        </div>
+</div>
+<div class="container">
+
+    <div class="col-md-4">
+
+        <div class="well">
+            Your Searches
+        </div>
+
+
+    </div>
+
+    <div class="col-md-4 dashboard" >
+
+        <div class="well">
+            Your Notes
+        </div>
+            <%@notes.each do |note| %>
+        <div class="well">
+
+            <p> <%= link_to note.title, note %> <%= note.created_at.strftime("%B %d, %Y") %> </p>
+
+            <p> <%= note.tag %> </p>
+
+        </div>
+            <% end %>
+    </div>
+
+
+</div>
+</div>
