@@ -7,11 +7,14 @@
         <%= label_tag(:bill, "Bill Number") %>
         <%= text_field_tag(:bill, nil, placeholder: "HB1030") %>
         <%= submit_tag "Search", class: "form-button", class: "btn btn-small btn-primary"  %>
-    <p>Note: When searching for legislation, please remove any year indicator from the bill number.  For example, "HB13-1030" should be entered "HB1030"</p>
+    <p><%= link_to "Reset Form", bill_tracker_path, class: "btn btn-small btn-primary"  %></p>
         <hr>
     <% end %>
-  <% if @bill_results %>
-      <!--<div class="results_container">-->
+    <% if @bill_results %>
+    <% if @bill_results["status"] == "ERROR" %>
+        <div class="errors" style="font-size: 20px; color:red"> There was an error with your search, please try again
+        </div>
+    <% else %>
 
       <%= render "results" %>
         <!--</div>-->
@@ -19,6 +22,7 @@
 
       <%= render "note" %>
             </div>
+  <% end %>
   <% end %>
         </div>
       </div>
