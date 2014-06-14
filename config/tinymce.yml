@@ -4,4 +4,10 @@ toolbar:
 plugins:
   - table
   - fullscreen
-
+setup :
+  function(ed) {
+    ed.on('init', function()
+    {
+        this.getDoc().body.style.fontSize = '17px';
+    });
+  }
