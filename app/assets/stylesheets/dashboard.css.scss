@@ -3,14 +3,6 @@
   margin-left: 29px;
 }
 
-#show_tag {
-  border: 1px solid black;
-  min-height: 25em;
-  background: lightgrey;
-  width: 50%;
-  opacity: .9;
-}
-
 .errors {
   background-color: mintcream;
 }
@@ -18,7 +10,8 @@
 #user {
   color: black;
 }
-.dashboard_container{
+
+.dashboard_container {
   min-height: 50em;
 }
 
@@ -27,9 +20,9 @@
   color: inherit;
 
 }
-.jumbotron{
-  background: image-url("capitol_vd_bobash.jpg") no-repeat center center fixed;
 
+.jumbotron {
+  background: image-url("capitol_vd_bobash.jpg") no-repeat center center fixed;
 }
 
 .col-md-4 .dashboard {
@@ -40,5 +33,4 @@
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-
 }

@@ -1,0 +1,13 @@
+<% @notes.each do |note| %>
+    <div class="col-md-8 note">
+      <div class="well">
+
+        <p> <%= link_to note.title, note %> <%= note.created_at.strftime("%B %d, %Y") %> </p>
+
+        <p> <%= note.tag %> </p>
+        <%= note.title %>
+        <%= note.tag %>
+        <%= note.note.html_safe %>
+      </div>
+<% end %>
+</div>
