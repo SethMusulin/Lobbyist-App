@@ -10,9 +10,8 @@ Feel free to leave any feature requests under the "feature request" link.  The c
 
 == Important Links
 
-Staging: http://shrouded-garden-8917.herokuapp.com/
+Staging: http://lobb.herokuapp.com/log_in
 
-Production: http://aqueous-dusk-5147.herokuapp.com/
 
 Github: https://github.com/SethMusulin/Lobbyist-App
 
