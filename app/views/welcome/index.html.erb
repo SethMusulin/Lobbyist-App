@@ -1,33 +1,49 @@
-<div class="container-full">
+<div class="container-fluid container-full">
 
   <div class="logo_container">
     <div class="logo">
-    <!--<img src="assets/Lobb.png" width="300"  height="100" margin-left="300" alt="Logo" />-->
-      <%= image_tag "Lobb.png"%>
-</div>
-</div>
-<div class="row">
-
-  <div class="col-lg-12 text-center v-center">
-
-    <p class="logo_lead"> LOBB </p>
-    <p class="lead">Sign in below or scroll down for more information</p>
-    <br>
-
-      <%= form_tag :controller => :sessions, :action => :create, class: "input-group input-group-lg col-sm-offset-4 col-sm-4" do %>
-      <%= label_tag :email%>  <%= text_field_tag :email%>
-      <%= label_tag :password %>  <%= password_field_tag :password %>
-      <%= submit_tag 'Login', :id => 'login_submit', class: "btn btn-large btn-primary" %>
-      <% end %>
-      <p> <%= link_to 'Forgot password?', '/reset_passwords/new' %></p>
-      <a href="/users">Register</a>
-
+      <%= image_tag "Lobb.png", class: "logo_pic" %>
+    </div>
   </div>
 
-</div> <!-- /row -->
+  <div class="row">
+
+    <div class="col-lg-12 v-center">
+
+      <p class="logo_lead text-center"> LOBB </p>
+
+      <p class="lead text-center">Sign in below or scroll down for more information</p>
+      <br>
+
+      <div class="signin-form-container">
+        <%= form_tag({:controller => :sessions, :action => :create}) do %>
+            <div class="form-group">
+              <%= label_tag :email, nil, class: "control-label" %>
+              <div class="controls">
+                <%= text_field_tag :email, nil, class: "form-control" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <%= label_tag :password, nil, class:"control-label" %>
+              <div class="">
+                <%= password_field_tag :password, nil, class: "form-control" %>
+              </div>
+            </div>
+            <div class="">
+              <%= submit_tag 'Login', :id => 'login_submit', class: "btn btn-large btn-primary" %>
+            </div>
+        <% end %>
+        <p> <%= link_to 'Forgot password?', '/reset_passwords/new' %></p>
+        <a href="/users">Register</a>
+      </div>
+
+    </div>
+
+  </div>
+  <!-- /row -->
 
 
-<br><br><br><br><br>
+  <br><br><br><br><br>
 
 </div> <!-- /container full -->
 
@@ -39,14 +55,16 @@
     <div class="col-md-4">
       <div class="panel panel-default">
         <div class="panel-heading"><h3><a href="/dashboard">Welcome to Lobb</a></h3></div>
-        <div class="panel-body">Lobb is a simple web application for lobbyists that allows you to check the status of legislation and take notes on the fly.
+        <div class="panel-body">Lobb is a simple web application for lobbyists that allows you to check the status of
+          legislation and take notes on the fly.
         </div>
       </div>
     </div>
     <div class="col-md-4">
       <div class="panel panel-default">
         <div class="panel-heading"><h3><a href="/bill_tracker" data-toggle="modal">Bill Tracker</a></h3></div>
-        <div class="panel-body">Bill tracker utilizes the Legiscan API to bring you up-to-date information on the legislation that is important to you.
+        <div class="panel-body">Bill tracker utilizes the Legiscan API to bring you up-to-date information on the
+          legislation that is important to you.
           Sign up today to give it a try.
         </div>
       </div>

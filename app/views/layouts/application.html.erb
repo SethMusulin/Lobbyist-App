@@ -3,20 +3,23 @@
 <head>
   <title>LobbyistApp</title>
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
   <%= favicon_link_tag 'Lobb_copy.png' %>
   <%= csrf_meta_tags %>
 </head>
+<body>
 
-<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-  <div class="container navbar-inner">
-    <a href="/" class="navbar-brand">L  O  B  B </a>
+<div class="navbar navbar-inverse navbar-static-top">
+  <div class="container">
+    <a href="/" class="navbar-brand">L O B B </a>
 
     <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+
+      <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
@@ -27,32 +30,29 @@
         <li><a href="/dashboard">Dashboard </a></li>
         <li><a href="/notes">N o t e s </a></li>
         <li><a href="/feature_requests">Feature Requests</a></li>
-
-        <!--<li class="dropdown" role="menu">-->
-          <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Bill Tracker </a>-->
-        <li><a href="/bill_tracker" data-toggle="modal">Bill Tracker</a></li>
+        <li><a href="/bill_tracker">Bill Tracker</a></li>
       </ul>
     </div>
 
   </div>
-  <% if current_user%>
+  <% if current_user %>
       <%= link_to current_user.email, "/users/#{current_user.id}" %>
       &nbsp
       <%= link_to "Log out", log_out_path %>
-      <% else %>
+  <% else %>
       <div>
-      </li> <a href="/users">Register</a></li>
-      &nbsp
-      </li><%= link_to "Log in", log_in_path %></li>
+        </li> <a href="/users">Register</a></li>
+        &nbsp
+        </li><%= link_to "Log in", log_in_path %></li>
       </div>
-      <% end %>
-</nav>
+  <% end %>
+</div>
 
 <% flash.each do |name, msg| -%>
     <%= content_tag :div, msg, class: name %>
 <% end -%>
 
 <%= yield %>
-
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </body>
 </html>
