@@ -1,5 +1,5 @@
 <h2>Register to become a user</h2>
-
+<div class="users-sign-in">
 <%= form_for @user do |f| %>
     <% if @user %>
         <% if @user.errors %>
@@ -22,3 +22,4 @@
     <%= f.submit class: "form-button", class: "btn btn-large btn-primary"  %>
 
 <%end%>
+</div>
