@@ -1,37 +1,48 @@
 <div class="dashboard_container">
-<div class="jumbotron">
-        <div class="intro_text">
-            <p> D a s h b o a r d</p>
-        </div>
-</div>
-<div class="container">
+  <div class="jumbotron">
+    <div class="intro_text">
+      <p> D a s h b o a r d</p>
+    </div>
+  </div>
+  <div class="container">
 
     <div class="col-md-4">
 
-        <div class="well">
-            Your Searches
-        </div>
+      <div class="well">
+        <h4>Your Legislative Searches</h4>
+      </div>
+      <% @searches.each do |search| %>
+          <div class="well">
+
+            <p> <%= search.state %> <%= search.bill %></p>
+
+            <p><em><strong>Searched:</strong></em> <%= search.created_at.strftime("%B %d, %Y") %> </p>
+
+          </div>
+      <% end %>
 
 
     </div>
 
-    <div class="col-md-4 dashboard" >
+    <div class="col-md-4 dashboard">
 
-        <div class="well">
-            Your Notes
-        </div>
-            <%@notes.each do |note| %>
-        <div class="well">
+      <div class="well">
+        <h4>Your Notes</h4>
+      </div>
+      <% @notes.each do |note| %>
+          <div class="well">
 
-            <p> <%= link_to note.title, note %> <%= note.created_at.strftime("%B %d, %Y") %> </p>
+            <p> <%= link_to note.title, note %></p>
+
+            <p><%= note.created_at.strftime("%B %d, %Y") %> </p>
 
             <p> <%= note.tag %> </p>
 
-        </div>
-            <% end %>
+          </div>
+      <% end %>
     </div>
 
 
-</div>
+  </div>
 </div>
 </div>

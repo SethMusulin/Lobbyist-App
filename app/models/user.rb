@@ -1,6 +1,7 @@
 
 class User < ActiveRecord::Base
   has_many :notes
+  has_many :searches
 
   validates :email, :presence => true,
              :length => {:maximum => 55}
