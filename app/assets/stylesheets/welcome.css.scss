@@ -1,9 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Antic+Slab);
 
 .logo_pic {
-  width: 100%;
-  max-width: 650px;
-
+ display: none;
 }
 
 .signin-form-container {
@@ -16,7 +14,11 @@
 }
 
 .logo_lead {
-  display: none;
+  display: block;
+  font-family: 'Antic Slab', serif;
+  font-size: 150px;
+  color: #3D66B8;
+  opacity: .9;
 }
 
 .lead {
@@ -36,6 +38,11 @@
 
   html, body {
     height: 100%;
+  }
+
+  .logo_pic {
+    width: 100%;
+    max-width: 650px;
   }
 
   .logo_lead {
