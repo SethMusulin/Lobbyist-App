@@ -33,7 +33,7 @@
               Sponsors</h3>
           </div>
           <div class="panel-body">
-            <% @bill_results["bill"]["sponsors"].map do |sponsor| %>
+            <% @bill_results["bill"]["sponsors"].reverse_each.map do |sponsor| %>
                 <p><%= sponsor["name"] %></p>
             <% end %>
           </div>
