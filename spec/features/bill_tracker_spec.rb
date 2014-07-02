@@ -6,10 +6,10 @@ feature "BillTracker" do
     VCR.use_cassette('legiscan/bills2') do
 
       first(:link, "Register").click
-    fill_in "Email", with: "seth@example.com"
-    fill_in "Password", with: "123456"
-    fill_in "Password confirmation", with: "123456"
-    click_button "Create User"
+      fill_in "Email", with: "seth@example.com"
+      fill_in "Password", with: "123456"
+      fill_in "Password confirmation", with: "123456"
+      click_button "Create User"
       click_link "Bill Tracker"
       fill_in "State Abbreviation", with: "CO"
       fill_in "Bill Number", with: "HB1030"

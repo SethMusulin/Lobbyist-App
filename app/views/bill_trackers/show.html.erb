@@ -2,12 +2,14 @@
 <div class="bill_container">
   <div class="bill_search">
     <%= form_tag("/bill_tracker", method: "get") do %>
+        <%= label_tag(:year, "Year") %>
+        <%= text_field_tag(:year, nil) %>
         <%= label_tag(:state, "State Abbreviation") %>
         <%= text_field_tag(:state, nil, placeholder: "CO") %>
         <%= label_tag(:bill, "Bill Number") %>
         <%= text_field_tag(:bill, nil, placeholder: "HB1030") %>
         <%= submit_tag "Search", class: "form-button", class: "btn btn-small btn-primary"  %>
-    <p><%= link_to "Reset Form", bill_tracker_path, class: "btn btn-small btn-primary"  %></p>
+    <p><%= link_to "Reset Form", bill_tracker_path, class: "btn btn-small btn-primary"  %>  Please note, if no year is entered, the default will be the current legislative session</p>
         <hr>
     <% end %>
     <% if @bill_results %>
