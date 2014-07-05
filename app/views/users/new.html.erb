@@ -10,14 +10,14 @@
     <% end %>
 
 
-    <%= f.label :email, class: "form-label"%>
-   <p> <%= f.text_field :email %></p>
+    <%= f.label :email, class: "control-label"%>
+   <p> <%= f.text_field :email, class: "form-control"%></p>
 
     <%= f.label :password, class: "form-label" %>
-    <p><%= f.password_field :password %></p>
+    <p><%= f.password_field :password, class: "form-control" %></p>
 
     <%= f.label :password_confirmation, class: "form-label" %>
-    <p> <%= f.password_field :password_confirmation %></p>
+    <p> <%= f.password_field :password_confirmation, class: "form-control" %> </p>
 
     <%= f.submit class: "form-button", class: "btn btn-large btn-primary"  %>
 
