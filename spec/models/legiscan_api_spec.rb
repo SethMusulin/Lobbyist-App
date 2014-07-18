@@ -4,7 +4,7 @@ require 'legiscan_api'
 describe "LegiScanApi" do
   it 'returns bill information after user inputs necessary information' do
     #stub for CO HB1030, located in fixtures/vcr_cassettes/legiscan
-    VCR.use_cassette('legiscan/bills2') do
+    VCR.use_cassette('legiscan/bills4') do
       response = LegiScanApi.new(ENV['LEGISCAN'], "CO", "SB252", "2013")
       response_body = response.retrieve_bill_info
 

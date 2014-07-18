@@ -19,9 +19,6 @@ feature "Homepage" do
 
     expect(page).to have_content("Log out")
 
-    click_link "seth@example.com"
-    expect(page).to have_content("Profile")
-
   end
   scenario "user can reset their password" do
     user = User.create!(email: 'user@example.com', password: 'Password1')
