@@ -4,6 +4,7 @@ gem 'newrelic_rpm'
 gem 'tinymce-rails', '~> 4.0.19'
 gem 'rails_12factor', '~> 0.0.2'
 gem 'faraday', '~> 0.9.0'
+gem 'evernote_oauth', '~> 0.2.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
 # Use postgresql as the database for Active Record

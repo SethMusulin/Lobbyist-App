@@ -3,7 +3,7 @@ require 'spec_helper'
 feature "BillTracker" do
   scenario "it returns the user information on the requested bill" do
     visit '/'
-    VCR.use_cassette('legiscan/bills3') do
+    VCR.use_cassette('legiscan/billsearch') do
 
       first(:link, "Register").click
       fill_in "Email", with: "seth@example.com"
