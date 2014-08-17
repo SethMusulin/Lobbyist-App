@@ -19,7 +19,7 @@ feature "Note Pad" do
     fill_in "Title", with: "test"
     fill_in "Note", with: "This is a sweet test entry"
     click_on "Create Note"
-    expect(page).to have_content "This is a sweet test entry"
+    expect(page).to have_content "test"
     click_link "N o t e s"
     click_link "test"
     expect(page).to have_content "This is a sweet test entry"
