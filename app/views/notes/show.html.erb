@@ -1,6 +1,6 @@
 <div class="note-container">
 <h3>Created</h3>
-  <div class="well"><%= @note.created_at.strftime("%B %d, %Y") %>
+  <div class="well "><%= @note.created_at.strftime("%B %d, %Y") %>
   </div>
   <h3>Title </h3>
   <div class="well"><%= @note.title %>
@@ -10,10 +10,10 @@
        </div>
    <div class="well"><%= @note.note.html_safe%>
        </div>
-</div>
 <div>
 
  <p> <%=link_to "Delete Note", note_path(@note), method: :delete, id: "button", class:"btn btn-default", data: {confirm: "Are you sure?"}%></p>
   <p><%=link_to "Edit Note", edit_note_path(@note), class:"btn btn-default"%></p>
 
+</div>
 </div>

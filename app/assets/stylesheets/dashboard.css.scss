@@ -17,7 +17,7 @@
 }
 
 .jumbotron {
-  background-color:lightgrey;
+  background-color: lightgrey;
 }
 
 .col-md-4 .dashboard {
@@ -28,4 +28,28 @@
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
+}
+
+.evernote {
+  img {
+    height: 3em;
+    margin-left: 13em;
+    margin-top: -6em;
+  }
+  .evernote-text {
+    display: block
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .evernote {
+    img {
+      height: 5em;
+      margin-left: 17em;
+      margin-top: -6em;
+    }
+    .evernote-text {
+      display: inline-block
+    }
+  }
 }

@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   get "log_out" => "sessions#destroy", :as => "log_out"
   get "log_in" => "sessions#new", :as => "log_in"
 
+  get '/auth/evernote/callback', to: 'evernote#create'
+  get '/auth/failure', to: 'evernote#failure'
+
   resource :reset_passwords
   get    '/reset-passwords/edit/:id' =>   'reset_passwords#edit'
   patch   '/reset-passwords/edit/:id' =>   'reset_passwords#update'

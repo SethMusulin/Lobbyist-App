@@ -12,6 +12,5 @@ class SignedinController < ApplicationController
       redirect_to '/users', notice: "You must be signed in to access this page"
     end
 
-
   end
 end

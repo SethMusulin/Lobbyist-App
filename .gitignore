@@ -16,3 +16,4 @@
 /tmp
 .env
 .gitignore
+/config/evernote.yml
