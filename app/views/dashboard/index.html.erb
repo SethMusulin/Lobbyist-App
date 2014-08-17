@@ -5,49 +5,34 @@
 
       <div class="evernote">
         <%= link_to image_tag("http://icons.iconarchive.com/icons/martz90/circle/512/evernote-icon.png"), "/auth/evernote", class: "evernote" %>
-        <%= link_to "Connect to Evernote", "/auth/evernote", class:"evernote-text" %>
+        <%= link_to "Connect to Evernote", "/auth/evernote", class: "evernote-text" %>
       </div>
     </div>
   </div>
   <div class="container">
 
-    <div class="col-md-4">
+    <div class="col-md-4" id="dash-search">
 
       <div class="well">
         <h4>Your Legislative Searches</h4>
       </div>
-      <% @searches.each do |search| %>
-          <div class="well">
+      <%= render :partial => "search", collection: @searches %>
 
-            <p> <%= search.state %> <%= search.bill %></p>
-
-            <p><em><strong>Searched:</strong></em> <%= search.created_at.strftime("%B %d, %Y") %> </p>
-
-          </div>
-      <% end %>
-
-
+      <div id="infinite-scrolling">
+        <%= will_paginate @searches %>
+      </div>
     </div>
 
-    <div class="col-md-4 dashboard">
+    <div class="col-md-4 dashboard" id="dash-note">
 
       <div class="well">
         <h4>Your Notes</h4>
       </div>
-      <% @notes.each do |note| %>
-          <div class="well">
+      <%= render :partial => "note", collection: @notes %>
 
-            <p> <%= link_to note.title, note %></p>
-
-            <p><%= note.created_at.strftime("%B %d, %Y") %> </p>
-
-            <p> <%= note.tag %> </p>
-
-          </div>
-      <% end %>
+      <div id="infinite-scrolling">
+        <%= will_paginate @notes %>
+      </div>
     </div>
-
-
   </div>
-</div>
 </div>

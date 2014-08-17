@@ -4,5 +4,4 @@ class Note < ActiveRecord::Base
    validates :note, :presence => true
    validates :title, :presence => true
 
-
 end

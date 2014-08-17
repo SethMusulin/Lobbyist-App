@@ -6,6 +6,7 @@ gem 'rails_12factor', '~> 0.0.2'
 gem 'faraday', '~> 0.9.0'
 gem 'evernote_oauth'
 gem 'omniauth-evernote'
+gem 'will_paginate', '~> 3.0.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
 # Use postgresql as the database for Active Record
