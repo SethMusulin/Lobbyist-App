@@ -3,7 +3,6 @@ class EvernoteController < ApplicationController
 
   def create
     auth = request.env["omniauth.auth"]
-    p auth
     session[:authtoken] = auth['credentials']['token']
     client = EvernoteOAuth::Client.new(token: session[:authtoken])
 
