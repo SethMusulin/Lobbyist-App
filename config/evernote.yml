@@ -1,7 +1,7 @@
- production:
-    consumer_key: sethmusulin
-      consumer_secret: 825ada921204c470
-      sandbox: true
+# production:
+#    consumer_key: sethmusulin
+#      consumer_secret: 825ada921204c470
+#      sandbox: true
 
   development:
     consumer_key: sethmusulin
