@@ -1,5 +1,5 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :developer unless Rails.env.production?
+  provider :evernote unless Rails.env.production?
   provider :evernote, ENV['EN_CONSUMER_KEY'], ENV['EN_CONSUMER_SECRET']
 end
 
