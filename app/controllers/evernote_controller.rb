@@ -14,6 +14,7 @@ class EvernoteController < ApplicationController
   end
 
   def failure
+
     redirect_to '/dashboard', flash: {:auth_failure => "Authorization with Evernote has failed, please retry."}
   end
 
