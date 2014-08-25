@@ -14,8 +14,9 @@ class EvernoteController < ApplicationController
   end
 
   def failure
-
-    redirect_to '/dashboard', flash: {:auth_failure => "Authorization with Evernote has failed, please retry."}
+    user = current_user
+    user.update_attributes(access_token: nil)
+    redirect_to '/dashboard', flash: {:auth_failure => "Authorization with Evernote has been cancelled or has failed. If a failure has occurred, please try again"}
   end
 
 end

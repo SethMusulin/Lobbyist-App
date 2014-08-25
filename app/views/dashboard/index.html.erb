@@ -5,34 +5,38 @@
 
       <div class="evernote">
         <%= link_to image_tag("http://icons.iconarchive.com/icons/martz90/circle/512/evernote-icon.png"), "/auth/evernote", class: "evernote" %>
-        <%= link_to "Evernote Compatability Coming Soon!", "/auth/evernote", class: "evernote-text" %>
-      </div>
-    </div>
-  </div>
-  <div class="container">
+        <% if current_user.access_token %>
+            <%= link_to "Disconnect from Evernote", "/auth/evernote", class: "evernote-text" %>
+            <% else %>
+            <%= link_to "Connect to Evernote", "/auth/evernote", class: "evernote-text" %>
+            <%end  %>
+            </div>
+            </div>
+            </div>
+            <div class="container">
 
-    <div class="col-md-4" id="dash-search">
+              <div class="col-md-4" id="dash-search">
 
-      <div class="well">
-        <h4>Your Legislative Searches</h4>
-      </div>
-      <%= render :partial => "search", collection: @searches %>
+                <div class="well">
+                  <h4>Your Legislative Searches</h4>
+                </div>
+                <%= render :partial => "search", collection: @searches %>
 
-      <div id="infinite-scrolling">
-        <%= will_paginate @searches %>
-      </div>
-    </div>
+                <div id="infinite-scrolling">
+                  <%= will_paginate @searches %>
+                </div>
+              </div>
 
-    <div class="col-md-4 dashboard" id="dash-note">
+              <div class="col-md-4 dashboard" id="dash-note">
 
-      <div class="well">
-        <h4>Your Notes</h4>
-      </div>
-      <%= render :partial => "note", collection: @notes %>
+                <div class="well">
+                  <h4>Your Notes</h4>
+                </div>
+                <%= render :partial => "note", collection: @notes %>
 
-      <div id="infinite-scrolling">
-        <%= will_paginate @notes %>
-      </div>
-    </div>
-  </div>
-</div>
+                <div id="infinite-scrolling">
+                  <%= will_paginate @notes %>
+                </div>
+              </div>
+            </div>
+            </div>
