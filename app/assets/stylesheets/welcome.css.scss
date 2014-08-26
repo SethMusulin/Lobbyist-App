@@ -27,11 +27,15 @@
   background-repeat: repeat-x;
 }
 
+.evernote-welcome{
+  display: none;
+}
+
 //anything under this line will not take affect until 700 px
 @media screen and (min-width: 700px) {
 
   #welcome-page-container {
-    background: image-url("capitol_vd_bobash.jpg") no-repeat center center fixed;
+//    background: image-url("capitol_vd_bobash.jpg") no-repeat center center fixed;
     background-size: cover;
     height: 100%;
   }
@@ -57,8 +61,9 @@
     margin: 0 auto;
     width: 100%;
     min-height: 100%;
-    color: #eee;
-    background: image-url("capitol_vd_bobash.jpg") no-repeat center center fixed;
+//    color: #eee;
+//    background: image-url("capitol_vd_bobash.jpg") no-repeat center center fixed;
+    background-color: rgba(128,128,128,1);
     background-size: cover;
 
     overflow: hidden;
@@ -78,7 +83,15 @@
   }
 
   .v-center {
-    margin-top: 20%;
+    margin-top: 5%;
   }
+
+  .evernote-welcome{
+    height: 2em;
+    margin-left: 8em;
+    margin-top: -10px;
+    margin-bottom: -8px;
+  }
+
 
 }
