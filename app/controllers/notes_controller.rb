@@ -17,7 +17,7 @@ class NotesController < SignedinController
     @note.user_id = session[:user_id]
     if @note.save
       if current_user.access_token
-      client = EvernoteOAuth::Client.new(token: session[:authtoken])
+      client = EvernoteOAuth::Client.new(token: current_user.access_token)
       note_store = client.note_store
       make_note(note_store, @note.title, @note.note)
       end
